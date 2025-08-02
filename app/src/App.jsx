@@ -45,26 +45,32 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white flex flex-col items-center justify-start p-4 gap-6">
+    <div className="min-h-screen bg-[#0f172a] text-white flex flex-col items-center p-4 gap-6">
       <WelcomeModal />
+
       <p className="text-lg font-semibold mt-4 text-center">
         meu amor, você é minha pessoa favorita no mundo todo ❤️
       </p>
 
-      <div className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg aspect-[3/4]">
-        <Carousel images={images} />
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-md min-w-[280px] rounded-2xl overflow-hidden shadow-lg flex flex-col my-4">
+        <div className="aspect-[4/5] w-full">
+          <Carousel images={images} />
+        </div>
       </div>
 
-      <p className="text-center text-sm mt-4 leading-relaxed">
-        eu te amo há{" "}
-        <span className="font-bold text-pink-300">{elapsed.months}</span> meses,{" "}
-        <span className="font-bold text-pink-300">{elapsed.days}</span> dias,{" "}
-        <span className="font-bold text-pink-300">{elapsed.hours}</span> horas,{" "}
-        <span className="font-bold text-pink-300">{elapsed.minutes}</span>{" "}
-        minutos e{" "}
-        <span className="font-bold text-pink-300">{elapsed.seconds}</span>{" "}
-        segundos. 🩷
-      </p>
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-md px-2">
+        <p className="text-center text-sm sm:text-base md:text-lg leading-snug break-words">
+          eu te amo há{" "}
+          <span className="font-bold text-pink-300">{elapsed.months}</span>{" "}
+          meses,{" "}
+          <span className="font-bold text-pink-300">{elapsed.days}</span> dias,{" "}
+          <span className="font-bold text-pink-300">{elapsed.hours}</span> horas,{" "}
+          <span className="font-bold text-pink-300">{elapsed.minutes}</span>{" "}
+          minutos e{" "}
+          <span className="font-bold text-pink-300">{elapsed.seconds}</span>{" "}
+          segundos. 🩷
+        </p>
+      </div>
     </div>
   );
 }
