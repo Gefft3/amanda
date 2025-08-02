@@ -23,8 +23,7 @@ function App() {
   });
 
   useEffect(() => {
-    
-    const start = new Date("2025-04-09T12:30:00"); 
+    const start = new Date("2025-04-09T12:30:00");
     const tick = () => {
       const now = new Date();
       const diff = now - start;
@@ -52,14 +51,13 @@ function App() {
         meu amor, você é minha pessoa favorita no mundo todo ❤️
       </p>
 
-      <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl overflow-hidden shadow-lg aspect-[3/4]">
         <Carousel images={images} />
       </div>
 
       <p className="text-center text-sm mt-4 leading-relaxed">
         eu te amo há{" "}
-        <span className="font-bold text-pink-300">{elapsed.months}</span>{" "}
-        meses,{" "}
+        <span className="font-bold text-pink-300">{elapsed.months}</span> meses,{" "}
         <span className="font-bold text-pink-300">{elapsed.days}</span> dias,{" "}
         <span className="font-bold text-pink-300">{elapsed.hours}</span> horas,{" "}
         <span className="font-bold text-pink-300">{elapsed.minutes}</span>{" "}
